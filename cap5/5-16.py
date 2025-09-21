@@ -2,7 +2,7 @@ valor = int(input("digite o valor a pagar: "))
 
 cedulas = 0
 atual = 50
-apagar = valor
+apagar = 0 #else if apagar == 0 true break
 
 while True:
 
