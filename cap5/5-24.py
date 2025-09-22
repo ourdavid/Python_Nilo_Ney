@@ -1,32 +1,26 @@
-tabuada = int(input("Tabuada: "))
+n = int(input("Quantos números primos você quer imprimir? "))
 
-while True:
+contador_primos = 0   # quantos primos já achei
+numero = 2            # primeiro número a testar
+
+while contador_primos < n:
+    # verificar se 'numero' é primo
+    if numero == 2:
+        primo = True
+    elif numero % 2 == 0:
+        primo = False
+    else:
+        primo = True
+        divisor = 3
+        while divisor < numero:
+            if numero % divisor == 0:
+                primo = False
+                break
+            divisor += 2
     
-    print("operacao da tabuada")
-    print("1) +")
-    print("2) -")
-    print("3) *")
-    print("4) /")
-    operacao = int(input("digite o numero da operacao"))
-
-    numero = 1
-    if operacao == 1:
-        while numero <= 10:
-            print(f"{tabuada} - {numero} = {tabuada + numero}")
-            numero += 1 
-    elif operacao == 2:
-        while numero <= 10:
-            print(f"{tabuada} - {numero} = {tabuada - numero}")
-            numero += 1 
-    elif operacao == 3:
-        while numero <= 10:
-            print(f"{tabuada} - {numero} = {tabuada * numero}")
-            numero += 1 
-    elif operacao == 4:
-        while numero <= 10:
-            print(f"{tabuada} - {numero} = {tabuada / numero}")
-            numero += 1 
-
-    saida = input("Sair : [s] ou [n]")
-    if saida.lower() == "s":
-        break
+    # se for primo, imprime e soma no contador
+    if primo:
+        print(numero, end=" ")
+        contador_primos += 1
+    
+    numero += 1  # passa para o próximo número
