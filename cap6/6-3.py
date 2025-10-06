@@ -35,7 +35,5 @@ while x < len(l2):
         l3.append(valor)
     x += 1
 
-
-
 print(l3)
 
