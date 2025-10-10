@@ -1,14 +1,16 @@
-
-numeros = [0,0,0,0,0]
+l = [1,2,3,4,5]
+l2 = [6,7,8,8,9,10]
+l3 = []
 x = 0
 
-while x < 5:
-    numeros[x] = int(input(f"Numero {x+1}: "))
-    x += 1 
+while x < len(l):
+    l3.append(l[x])
+    x += 1
 
-print(numeros)
-while True:
-    escolhindo = int(input(f"Que posicao voce quer imprimir (0 para sair): "))
-    if escolhindo == 0:
-        break
-    print(f"Voce escolheu a posicao {numeros[(escolhindo-1)]}")
+x = 0
+while x < len(l2):
+    l3.append(l2[x])
+    x += 1
+
+print(l3)
+

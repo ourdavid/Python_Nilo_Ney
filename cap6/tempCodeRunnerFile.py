@@ -1,0 +1,3 @@
+
+print(media)
+print(maior)
