@@ -1,3 +1,1 @@
-
-print(media)
-print(maior)
+produto
