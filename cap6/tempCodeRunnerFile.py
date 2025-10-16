@@ -1,1 +1,2 @@
-produto
+
+print(dicionario_frase)
